@@ -1,17 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Reveal } from "@/components/Reveal";
-import pesarattu from "@/assets/pesarattu-hero.jpg";
 import chutneys from "@/assets/chutneys.jpg";
 import idli from "@/assets/idli-sambar.jpg";
 import drumstick from "@/assets/drumstick-sambar.jpg";
 import tawa from "@/assets/tawa-pour.jpg";
 import dosa1 from "@/assets/dosa-1.jpg";
-import dosa2 from "@/assets/dosa-2.jpg";
-import dosa4 from "@/assets/dosa-4.jpg";
-import dosa5 from "@/assets/dosa-5.jpg";
-import interior from "@/assets/interior.jpg";
-import chef from "@/assets/chef.jpg";
-import gal1 from "@/assets/gallery-1.jpg";
+import adc4 from "@/assets/idly/adc 4.png";
+import adc from "@/assets/idly/ADC.png";
+import dsbf4 from "@/assets/idly/dsbf 4.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -20,25 +16,21 @@ export const Route = createFileRoute("/gallery")({
       { name: "description", content: "The kitchen, the food, the moments." },
       { property: "og:title", content: "Gallery — Andhra Dosa Company" },
       { property: "og:description", content: "Photos from the kitchen and the dining room." },
-      { property: "og:image", content: pesarattu },
+      { property: "og:image", content: adc4 },
     ],
   }),
   component: GalleryPage,
 });
 
 const IMGS = [
-  { src: pesarattu, h: "tall" },
+  { src: adc4, h: "tall" },
+  { src: adc, h: "short" },
+  { src: dsbf4, h: "tall" },
   { src: chutneys, h: "short" },
   { src: idli, h: "tall" },
   { src: drumstick, h: "short" },
   { src: tawa, h: "short" },
   { src: dosa1, h: "tall" },
-  { src: dosa2, h: "short" },
-  { src: dosa4, h: "tall" },
-  { src: dosa5, h: "short" },
-  { src: interior, h: "tall" },
-  { src: chef, h: "short" },
-  { src: gal1, h: "tall" },
 ];
 
 function GalleryPage() {

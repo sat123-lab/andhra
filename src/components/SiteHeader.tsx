@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, Phone, ChevronRight, ChevronDown, X, Instagram, Facebook, MapPin, UtensilsCrossed, Star, Sparkles, Leaf, Flame, Circle, Coffee, Soup, type LucideIcon } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import logoSvg from "@/assets/logo.svg";
+import logoSvg from "@/assets/1767550022189.jpg";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -89,7 +89,7 @@ export function SiteHeader() {
                 scrolled ? "bg-[#D4A017]/20 ring-1 ring-[#D4A017]/30" : "bg-[#1a3a1a]"
               }`}
             >
-              <img src={logoSvg} alt="Andhra Dosa Co" className="w-full h-full object-contain" />
+              <img src={logoSvg} alt="Andhra Dosa Co" className="w-full h-full object-cover rounded-lg" />
               <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10" />
             </div>
             <div className="leading-tight">
@@ -270,7 +270,7 @@ function MobileDrawer({ pathname }: { pathname: string }) {
         <div className="relative flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-1.5 flex items-center justify-center">
-              <img src={logoSvg} alt="Logo" className="w-full h-full object-contain" />
+              <img src={logoSvg} alt="Logo" className="w-full h-full object-cover rounded-lg" />
             </div>
             <div>
               <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-[#D4A017] font-bold">

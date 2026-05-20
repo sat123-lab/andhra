@@ -9,9 +9,13 @@ import pesarattu from "@/assets/pesarattu-hero.jpg";
 import chutneys from "@/assets/chutneys.jpg";
 import idliSambar from "@/assets/idli-sambar.jpg";
 import drumstickSambar from "@/assets/drumstick-sambar.jpg";
+import heroDosa from "@/assets/hero-dosa.jpg";
 import dosa1 from "@/assets/dosa-1.jpg";
 import dosa2 from "@/assets/dosa-2.jpg";
 import dosa5 from "@/assets/dosa-5.jpg";
+import adc4 from "@/assets/idly/adc 4.png";
+import adc from "@/assets/idly/ADC.png";
+import dsbf4 from "@/assets/idly/dsbf 4.png";
 import logoSvg from "@/assets/logo.svg";
 
 import { Reveal } from "@/components/Reveal";
@@ -277,7 +281,7 @@ function StatsCounter() {
               <div className="w-14 h-14 mx-auto rounded-2xl bg-white/[0.03] border border-white/[0.08] grid place-items-center mb-4 backdrop-blur-sm">
                 <s.icon className="w-6 h-6 text-[#FFC300]" />
               </div>
-              <div className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-white">
+              <div className="font-montserrat font-bold text-4xl sm:text-5xl md:text-6xl text-white">
                 {s.value}
               </div>
               <div className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-white/35 mt-3 font-semibold">
@@ -315,7 +319,7 @@ function StorySection() {
             </div>
             {/* Floating badge */}
             <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-[#D62828] text-white rounded-2xl p-4 sm:p-5 shadow-[0_20px_60px_rgba(214,40,40,0.3)]">
-              <div className="font-display font-black text-2xl sm:text-3xl">37+</div>
+              <div className="font-montserrat font-bold text-2xl sm:text-3xl">37+</div>
               <div className="text-[9px] uppercase tracking-[0.2em] text-white/70 mt-1">Years Legacy</div>
             </div>
           </div>
@@ -341,7 +345,7 @@ function StorySection() {
               { k: "6hr", v: "Soaked" },
             ].map((s) => (
               <div key={s.v} className="rounded-xl bg-white/[0.03] border border-white/[0.08] p-3 sm:p-4 text-center group hover:bg-[#D4A017]/10 hover:border-[#D4A017]/30 transition-all duration-500 cursor-default">
-                <div className="font-display font-black text-xl sm:text-2xl text-[#FFC300] group-hover:scale-110 transition-transform">{s.k}</div>
+                <div className="font-montserrat font-bold text-xl sm:text-2xl text-[#FFC300] group-hover:scale-110 transition-transform">{s.k}</div>
                 <div className="text-[9px] uppercase tracking-wider text-white/40 mt-1 font-semibold">{s.v}</div>
               </div>
             ))}
@@ -473,10 +477,10 @@ function ProcessStrip() {
    ═══════════════════════════════════════════════════════════════════ */
 function MenuPreview() {
   const items = [
-    { img: pesarattu, name: "Pesarattu", tag: "Hero", price: "₹160" },
-    { img: dosa2, name: "Ghee Karam Dosa", tag: "Signature", price: "₹220" },
-    { img: dosa1, name: "Andhra Masala Dosa", tag: "Bestseller", price: "₹180" },
-    { img: dosa5, name: "Mysore Masala", tag: "Classic", price: "₹210" },
+    { img: adc4, name: "Pesarattu", tag: "Hero", price: "₹160" },
+    { img: adc, name: "Ghee Karam Dosa", tag: "Signature", price: "₹220" },
+    { img: heroDosa, name: "Andhra Masala Dosa", tag: "Bestseller", price: "₹180" },
+    { img: dsbf4, name: "Mysore Masala", tag: "Classic", price: "₹210" },
   ];
   return (
     <section className="relative py-24 sm:py-32 bg-[#0a0604] overflow-hidden">

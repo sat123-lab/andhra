@@ -1,28 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
-  <!-- Leaf/petal shape outline -->
-  <path d="M100 10 C55 45, 30 90, 40 130 C50 165, 75 185, 100 190 C125 185, 150 165, 160 130 C170 90, 145 45, 100 10Z" stroke="#D4A017" stroke-width="5" fill="none"/>
-  <!-- Dosa (half circle) -->
-  <ellipse cx="100" cy="105" rx="45" ry="22" fill="#C8962E"/>
-  <path d="M55 105 A45 22 0 0 1 145 105" fill="#D4A017"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 220" fill="none">
+  <!-- Dark green background circle -->
+  <circle cx="100" cy="110" r="100" fill="#1a3a1a"/>
+  <!-- Leaf/petal shape outline — sharper pointed top -->
+  <path d="M100 18 C65 50, 38 88, 42 128 C46 160, 70 178, 100 182 C130 178, 154 160, 158 128 C162 88, 135 50, 100 18Z" stroke="#D4A017" stroke-width="5" fill="none"/>
+  <!-- Dosa (large crescent) -->
+  <ellipse cx="100" cy="108" rx="48" ry="26" fill="#C8962E"/>
+  <path d="M52 108 A48 26 0 0 1 148 108" fill="#D4A017"/>
   <!-- Dosa dots/texture -->
-  <circle cx="75" cy="98" r="1.5" fill="#8B6914" opacity="0.6"/>
-  <circle cx="85" cy="95" r="1" fill="#8B6914" opacity="0.5"/>
-  <circle cx="95" cy="93" r="1.5" fill="#8B6914" opacity="0.6"/>
-  <circle cx="108" cy="94" r="1" fill="#8B6914" opacity="0.5"/>
-  <circle cx="118" cy="96" r="1.5" fill="#8B6914" opacity="0.6"/>
-  <circle cx="128" cy="99" r="1" fill="#8B6914" opacity="0.5"/>
-  <circle cx="90" cy="100" r="1" fill="#8B6914" opacity="0.4"/>
-  <circle cx="110" cy="100" r="1" fill="#8B6914" opacity="0.4"/>
+  <circle cx="70" cy="100" r="1.8" fill="#8B6914" opacity="0.5"/>
+  <circle cx="82" cy="96" r="1.3" fill="#8B6914" opacity="0.5"/>
+  <circle cx="95" cy="94" r="1.8" fill="#8B6914" opacity="0.5"/>
+  <circle cx="108" cy="95" r="1.3" fill="#8B6914" opacity="0.5"/>
+  <circle cx="120" cy="97" r="1.8" fill="#8B6914" opacity="0.5"/>
+  <circle cx="132" cy="100" r="1.3" fill="#8B6914" opacity="0.5"/>
+  <circle cx="88" cy="102" r="1" fill="#8B6914" opacity="0.4"/>
+  <circle cx="112" cy="102" r="1" fill="#8B6914" opacity="0.4"/>
   <!-- Left chutney bowl (red/tomato) -->
-  <circle cx="80" cy="135" r="14" fill="#6B8E3A" stroke="#4A6B2A" stroke-width="2"/>
-  <circle cx="80" cy="135" r="10" fill="#8B2500"/>
-  <path d="M76 132 C77 131 79 131 80 133" fill="#2E7D32" opacity="0.8"/>
+  <circle cx="78" cy="142" r="16" fill="#6B8E3A" stroke="#4A6B2A" stroke-width="2.5"/>
+  <circle cx="78" cy="142" r="11.5" fill="#8B2500"/>
+  <path d="M74 139 C75 137 78 137 80 140" fill="#2E7D32" opacity="0.8"/>
   <!-- Right chutney bowl (white/coconut) -->
-  <circle cx="120" cy="135" r="14" fill="#6B8E3A" stroke="#4A6B2A" stroke-width="2"/>
-  <circle cx="120" cy="135" r="10" fill="#F5F5DC"/>
-  <circle cx="117" cy="133" r="1" fill="#2C1810" opacity="0.6"/>
-  <circle cx="122" cy="136" r="1" fill="#2C1810" opacity="0.6"/>
-  <circle cx="119" cy="138" r="0.8" fill="#2C1810" opacity="0.5"/>
+  <circle cx="122" cy="142" r="16" fill="#6B8E3A" stroke="#4A6B2A" stroke-width="2.5"/>
+  <circle cx="122" cy="142" r="11.5" fill="#F5F5DC"/>
+  <circle cx="118" cy="140" r="1.2" fill="#2C1810" opacity="0.6"/>
+  <circle cx="124" cy="143" r="1.2" fill="#2C1810" opacity="0.6"/>
+  <circle cx="120" cy="146" r="1" fill="#2C1810" opacity="0.5"/>
+  <circle cx="126" cy="139" r="0.8" fill="#2C1810" opacity="0.4"/>
   <!-- Small V/chevron between bowls -->
-  <path d="M97 130 L100 136 L103 130" stroke="#D4A017" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M96 137 L100 144 L104 137" stroke="#D4A017" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

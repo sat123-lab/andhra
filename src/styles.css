@@ -158,6 +158,7 @@
   html { scroll-behavior: smooth; }
   body { background: #ffffff; color: var(--brand-ink); }
   .font-display { font-family: 'Playfair Display', 'Cormorant Garamond', serif; }
+  .font-montserrat { font-family: 'Montserrat', 'Inter', sans-serif; }
   .font-script { font-family: 'Playfair Display', serif; font-style: italic; }
   .glass-light {
     background: rgba(255,255,255,0.75);
