@@ -181,12 +181,7 @@ function Hero() {
         <h1 className={`font-display font-black text-center leading-[0.88] transition-all duration-[1200ms] delay-400 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
           style={{ perspective: "1000px" }}
         >
-          <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white"
-            style={{ textShadow: "0 4px 60px rgba(0,0,0,0.5), 0 0 120px rgba(212,160,23,0.1)" }}
-          >
-            The Andhra
-          </span>
-          <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-1 sm:mt-2"
+          <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
             style={{
               background: "linear-gradient(135deg, #FFC300 0%, #D4A017 50%, #FF7A00 100%)",
               WebkitBackgroundClip: "text",
@@ -195,7 +190,7 @@ function Hero() {
               textShadow: "none",
             }}
           >
-            Dosa Co.
+            Andhra Dosa Company
           </span>
         </h1>
 

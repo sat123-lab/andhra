@@ -85,11 +85,11 @@ export function SiteHeader() {
           {/* ── Logo ── */}
           <Link to="/" className="flex items-center gap-3 sm:gap-4 group shrink-0">
             <div
-              className={`relative w-11 h-11 sm:w-13 sm:h-13 rounded-xl overflow-hidden p-1.5 transition-all duration-300 group-hover:scale-105 ${
+              className={`relative w-11 h-11 sm:w-13 sm:h-13 rounded-xl overflow-hidden p-0.5 transition-all duration-300 group-hover:scale-105 ${
                 scrolled ? "bg-[#D4A017]/20 ring-1 ring-[#D4A017]/30" : "bg-[#1a3a1a]"
               }`}
             >
-              <img src={logoSvg} alt="Andhra Dosa Co" className="w-full h-full object-cover rounded-lg" />
+              <img src={logoSvg} alt="Andhra Dosa Co" className="w-full h-full object-contain rounded-lg" />
               <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/10" />
             </div>
             <div className="leading-tight">
@@ -269,8 +269,8 @@ function MobileDrawer({ pathname }: { pathname: string }) {
         </div>
         <div className="relative flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-1.5 flex items-center justify-center">
-              <img src={logoSvg} alt="Logo" className="w-full h-full object-cover rounded-lg" />
+            <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-0.5 flex items-center justify-center">
+              <img src={logoSvg} alt="Logo" className="w-full h-full object-contain rounded-lg" />
             </div>
             <div>
               <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-[#D4A017] font-bold">
