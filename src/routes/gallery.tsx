@@ -8,6 +8,15 @@ import dosa1 from "@/assets/dosa-1.jpg";
 import adc4 from "@/assets/idly/adc 4.png";
 import adc from "@/assets/idly/ADC.png";
 import dsbf4 from "@/assets/idly/dsbf 4.png";
+import galleryImg1 from "@/assets/gallary/2655b4fb-a390-4bf0-b2ab-6008f85a3b0a.jpg (1).jpeg";
+import galleryImg2 from "@/assets/gallary/2655b4fb-a390-4bf0-b2ab-6008f85a3b0a.jpg.jpeg";
+import galleryImg3 from "@/assets/gallary/39d7febe-27ce-45c0-8d95-56182eb52799.jpg.jpeg";
+import galleryImg4 from "@/assets/gallary/3c903ac1-58b6-4116-856d-da58e6147bd6.jpg.jpeg";
+import galleryImg5 from "@/assets/gallary/d3b6b160-c453-42a8-b21c-97cb8e844f10.jpg - Copy.jpeg";
+import galleryImg6 from "@/assets/gallary/d3b6b160-c453-42a8-b21c-97cb8e844f10.jpg.jpeg";
+import galleryImg7 from "@/assets/gallary/dc44d23f-87e7-4e2d-be61-0847082a5245.jpg.jpeg";
+import galleryImg8 from "@/assets/gallary/ee8182df-0b89-4f56-9122-0eb2ebdea58f.jpg.jpeg";
+import galleryImg9 from "@/assets/gallary/fe8a6b40-db43-4ba7-8858-d05203527d88.jpg.jpeg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -31,6 +40,15 @@ const IMGS = [
   { src: drumstick, h: "short" },
   { src: tawa, h: "short" },
   { src: dosa1, h: "tall" },
+  { src: galleryImg1, h: "tall" },
+  { src: galleryImg2, h: "short" },
+  { src: galleryImg3, h: "tall" },
+  { src: galleryImg4, h: "short" },
+  { src: galleryImg5, h: "tall" },
+  { src: galleryImg6, h: "short" },
+  { src: galleryImg7, h: "tall" },
+  { src: galleryImg8, h: "short" },
+  { src: galleryImg9, h: "tall" },
 ];
 
 function GalleryPage() {
