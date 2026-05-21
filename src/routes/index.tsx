@@ -100,8 +100,29 @@ const MARQUEE = [
 ];
 
 function HomePage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-[#0a0604] text-white overflow-x-hidden">
+      {loading && (
+        <div className="fixed inset-0 z-50 bg-[#0a0604]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
+          <div className="flex flex-col items-center gap-6">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-2 flex items-center justify-center animate-pulse">
+              <img src={logoSvg} alt="Andhra Dosa Co." className="w-full h-full object-contain" />
+            </div>
+            <div className="text-[#D4A017] font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
+              Andhra Dosa Co.
+            </div>
+          </div>
+        </div>
+      )}
       <Hero />
       <MarqueeStrip />
       <StatsCounter />

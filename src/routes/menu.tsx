@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Flame, Leaf, Search } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import logoSvg from "@/assets/logo.svg";
 
 import pesarattu from "@/assets/pesarattu-hero.jpg";
 import dosa1 from "@/assets/dosa-1.jpg";
@@ -98,8 +99,17 @@ function Spice({ level }: { level: number }) {
 }
 
 function MenuPage() {
+  const [loading, setLoading] = useState(true);
   const [activeCat, setActiveCat] = useState<string>(CATS[0]);
   const [q, setQ] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const filtered = useMemo(() => {
     const ql = q.trim().toLowerCase();
     return ITEMS.filter((i) => i.cat === activeCat).filter((i) =>
@@ -109,6 +119,18 @@ function MenuPage() {
 
   return (
     <div className="bg-white">
+      {loading && (
+        <div className="fixed inset-0 z-50 bg-[#0a0604]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
+          <div className="flex flex-col items-center gap-6">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-2 flex items-center justify-center animate-pulse">
+              <img src={logoSvg} alt="Andhra Dosa Co." className="w-full h-full object-contain" />
+            </div>
+            <div className="text-[#D4A017] font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
+              Andhra Dosa Co.
+            </div>
+          </div>
+        </div>
+      )}
       {/* Title */}
       <section className="relative pt-44 sm:pt-40 pb-16 bg-[#FAF6EE] overflow-hidden">
         <div className="absolute right-0 top-0 font-display italic text-[#D62828]/[0.05] text-[22rem] leading-none select-none pointer-events-none hidden md:block">

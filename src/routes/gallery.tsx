@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useEffect } from "react";
 import { Reveal } from "@/components/Reveal";
 import chutneys from "@/assets/chutneys.jpg";
 import idli from "@/assets/idli-sambar.jpg";
@@ -17,6 +18,7 @@ import galleryImg6 from "@/assets/gallary/d3b6b160-c453-42a8-b21c-97cb8e844f10.j
 import galleryImg7 from "@/assets/gallary/dc44d23f-87e7-4e2d-be61-0847082a5245.jpg.jpeg";
 import galleryImg8 from "@/assets/gallary/ee8182df-0b89-4f56-9122-0eb2ebdea58f.jpg.jpeg";
 import galleryImg9 from "@/assets/gallary/fe8a6b40-db43-4ba7-8858-d05203527d88.jpg.jpeg";
+import logoSvg from "@/assets/logo.svg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -52,8 +54,29 @@ const IMGS = [
 ];
 
 function GalleryPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-white">
+      {loading && (
+        <div className="fixed inset-0 z-50 bg-[#0a0604]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
+          <div className="flex flex-col items-center gap-6">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-2 flex items-center justify-center animate-pulse">
+              <img src={logoSvg} alt="Andhra Dosa Co." className="w-full h-full object-contain" />
+            </div>
+            <div className="text-[#D4A017] font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
+              Andhra Dosa Co.
+            </div>
+          </div>
+        </div>
+      )}
       <section className="relative pt-36 pb-12 bg-[#FAF6EE]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>

@@ -12,7 +12,7 @@ export function SiteFooter() {
           <div className="md:col-span-5">
             <div className="font-display font-black text-3xl">Andhra Dosa Co.</div>
             <div className="text-[11px] uppercase tracking-[0.3em] text-[#FFC300] mt-1 font-semibold">
-              Bringing Andhra to Maharashtra
+              Taking Andhra Across India
             </div>
             <p className="mt-5 text-white/65 max-w-md leading-relaxed">
               Pesarattu, drumstick sambar, ginger chutney, bigger idlis. The flavours

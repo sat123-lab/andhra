@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState, useEffect } from "react";
 import { Reveal } from "@/components/Reveal";
 import { MapPin, Phone, Clock, Star, Navigation } from "lucide-react";
 import interior from "@/assets/interior.jpg";
@@ -7,6 +8,7 @@ import galleryImg2 from "@/assets/gallary/2655b4fb-a390-4bf0-b2ab-6008f85a3b0a.j
 import galleryImg3 from "@/assets/gallary/39d7febe-27ce-45c0-8d95-56182eb52799.jpg.jpeg";
 import galleryImg4 from "@/assets/gallary/3c903ac1-58b6-4116-856d-da58e6147bd6.jpg.jpeg";
 import galleryImg5 from "@/assets/gallary/d3b6b160-c453-42a8-b21c-97cb8e844f10.jpg.jpeg";
+import logoSvg from "@/assets/logo.svg";
 
 export const Route = createFileRoute("/locations")({
   head: () => ({
@@ -59,8 +61,29 @@ const LOCATIONS = [
 ];
 
 function LocationsPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-white">
+      {loading && (
+        <div className="fixed inset-0 z-50 bg-[#0a0604]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
+          <div className="flex flex-col items-center gap-6">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-2 flex items-center justify-center animate-pulse">
+              <img src={logoSvg} alt="Andhra Dosa Co." className="w-full h-full object-contain" />
+            </div>
+            <div className="text-[#D4A017] font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
+              Andhra Dosa Co.
+            </div>
+          </div>
+        </div>
+      )}
       <section className="relative pt-36 pb-16 bg-[#FAF6EE]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
