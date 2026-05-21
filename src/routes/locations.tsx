@@ -6,6 +6,7 @@ import galleryImg1 from "@/assets/gallary/2655b4fb-a390-4bf0-b2ab-6008f85a3b0a.j
 import galleryImg2 from "@/assets/gallary/2655b4fb-a390-4bf0-b2ab-6008f85a3b0a.jpg.jpeg";
 import galleryImg3 from "@/assets/gallary/39d7febe-27ce-45c0-8d95-56182eb52799.jpg.jpeg";
 import galleryImg4 from "@/assets/gallary/3c903ac1-58b6-4116-856d-da58e6147bd6.jpg.jpeg";
+import galleryImg5 from "@/assets/gallary/d3b6b160-c453-42a8-b21c-97cb8e844f10.jpg.jpeg";
 
 export const Route = createFileRoute("/locations")({
   head: () => ({
@@ -22,38 +23,38 @@ export const Route = createFileRoute("/locations")({
 
 const LOCATIONS = [
   {
-    name: "Koregaon Park",
-    address: "Koregaon Park, Pune 411001",
+    name: "Marol, Mumbai",
+    address: "Metro Station, Naka, Marol, Mumbai, Maharashtra 400059",
     phone: "+91 99999 99999",
     hours: "7 AM – 11 PM · Daily",
     status: "open",
+    image: galleryImg3,
+    directions: "https://www.google.com/maps/search/?api=1&query=Andhra+Dosa+Co+Marol+Mumbai",
+  },
+  {
+    name: "Western Exp Highway",
+    address: "Andheri-Kurla Road, next to Andheri Fly over, Andheri (E), Mumbai, 400069",
+    phone: "+91 99999 99999",
+    hours: "Opening in 15 days",
+    status: "coming-soon",
+    image: galleryImg5,
+    directions: "https://www.google.com/maps/search/?api=1&query=Western+Exp+Highway+Mumbai+Andheri",
+  },
+  {
+    name: "Koregaon Park, Pune",
+    address: "Coming Soon",
+    phone: "—",
+    hours: "Opening Soon",
+    status: "coming-soon",
+    image: galleryImg4,
+  },
+  {
+    name: "Viman Nagar, Pune",
+    address: "Coming Soon",
+    phone: "—",
+    hours: "Opening Soon",
+    status: "coming-soon",
     image: galleryImg1,
-    directions: "https://www.google.com/maps/search/?api=1&query=Andhra+Dosa+Co+Koregaon+Park+Pune",
-  },
-  {
-    name: "Viman Nagar",
-    address: "Viman Nagar, Pune 411014",
-    phone: "+91 99999 99999",
-    hours: "7 AM – 11 PM · Daily",
-    status: "open",
-    image: galleryImg2,
-    directions: "https://www.google.com/maps/search/?api=1&query=Andhra+Dosa+Co+Viman+Nagar+Pune",
-  },
-  {
-    name: "Coming Soon",
-    address: "Mumbai",
-    phone: "—",
-    hours: "Opening 2026",
-    status: "coming-soon",
-    image: null,
-  },
-  {
-    name: "Coming Soon",
-    address: "Nagpur",
-    phone: "—",
-    hours: "Opening 2026",
-    status: "coming-soon",
-    image: null,
   },
 ];
 
@@ -78,7 +79,7 @@ function LocationsPage() {
             {LOCATIONS.map((loc, i) => (
               <Reveal key={i} delay={i * 100}>
                 <div className={`relative overflow-hidden rounded-3xl ${loc.status === "coming-soon" ? "bg-[#FAF6EE]" : "bg-white border border-[#1a0f08]/10"}`}>
-                  {loc.image && loc.status !== "coming-soon" && (
+                  {loc.image && (
                     <div className="aspect-[16/9] overflow-hidden">
                       <img src={loc.image} alt={loc.name} loading="lazy" className="w-full h-full object-cover" />
                     </div>

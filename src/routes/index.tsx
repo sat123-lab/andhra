@@ -17,6 +17,11 @@ import adc4 from "@/assets/idly/adc 4.png";
 import adc from "@/assets/idly/ADC.png";
 import dsbf4 from "@/assets/idly/dsbf 4.png";
 import logoSvg from "@/assets/logo.svg";
+import galleryImg1 from "@/assets/gallary/2655b4fb-a390-4bf0-b2ab-6008f85a3b0a.jpg (1).jpeg";
+import galleryImg2 from "@/assets/gallary/2655b4fb-a390-4bf0-b2ab-6008f85a3b0a.jpg.jpeg";
+import galleryImg3 from "@/assets/gallary/39d7febe-27ce-45c0-8d95-56182eb52799.jpg.jpeg";
+import galleryImg4 from "@/assets/gallary/3c903ac1-58b6-4116-856d-da58e6147bd6.jpg.jpeg";
+import galleryImg5 from "@/assets/gallary/d3b6b160-c453-42a8-b21c-97cb8e844f10.jpg.jpeg";
 
 import { Reveal } from "@/components/Reveal";
 
@@ -104,6 +109,7 @@ function HomePage() {
       <FeaturedDishes />
       <ProcessStrip />
       <MenuPreview />
+      <GalleryHighlight />
       <BigCTA />
     </div>
   );
@@ -511,6 +517,57 @@ function MenuPreview() {
             </Reveal>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   GALLERY HIGHLIGHT — Showcase outlet photos
+   ═══════════════════════════════════════════════════════════════════ */
+function GalleryHighlight() {
+  const galleryImages = [
+    galleryImg1, galleryImg2, galleryImg3, galleryImg4, galleryImg5
+  ];
+
+  return (
+    <section className="relative py-24 sm:py-32 bg-[#0f0a06] overflow-hidden">
+      <div className="absolute left-1/2 -translate-x-1/2 top-20 w-[600px] h-[600px] bg-[#D4A017]/[0.02] rounded-full blur-[100px] pointer-events-none" />
+
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal>
+          <div className="text-center mb-14 sm:mb-20">
+            <div className="text-[10px] uppercase tracking-[0.4em] text-[#D62828] font-bold mb-4">Our Outlets</div>
+            <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.92] text-white">
+              Experience the<br />
+              <span className="font-medium text-[#FF7A00]">atmosphere.</span>
+            </h2>
+          </div>
+        </Reveal>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {galleryImages.map((img, i) => (
+            <Reveal key={i} delay={i * 100}>
+              <Link to="/gallery" className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl sm:rounded-3xl bg-white/[0.03] border border-white/[0.06]">
+                  <img src={img} alt="Andhra Dosa Co. outlet" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-white font-bold text-sm tracking-wide">View Gallery</span>
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal delay={500}>
+          <div className="text-center mt-12">
+            <Link to="/gallery" className="inline-flex items-center gap-2 rounded-full border border-[#D4A017]/30 text-[#D4A017] px-7 py-3 font-bold hover:bg-[#D4A017]/10 transition-all">
+              See All Photos <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
