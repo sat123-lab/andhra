@@ -6,10 +6,10 @@ import { useState } from "react";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Reservations — Andhra Dosa Company" },
+      { title: "Contact & Reservations — Andhra Dosa Co." },
       { name: "description", content: "Find us, call us, reserve a table." },
-      { property: "og:title", content: "Contact — Andhra Dosa Company" },
-      { property: "og:description", content: "Visit, call or reserve a table at Andhra Dosa Company." },
+      { property: "og:title", content: "Contact — Andhra Dosa Co." },
+      { property: "og:description", content: "Visit, call or reserve a table at Andhra Dosa Co." },
     ],
   }),
   component: ContactPage,
@@ -24,7 +24,7 @@ function ContactPage() {
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">Contact</div>
             <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
-              Come <span className="italic text-[#D62828]">hungry.</span><br />
+              Come <span className="text-[#D62828]">hungry.</span><br />
               Leave proud.
             </h1>
           </Reveal>

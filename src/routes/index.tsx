@@ -23,9 +23,9 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Andhra Dosa Company — Authentic Andhra Flavours in Maharashtra" },
+      { title: "Andhra Dosa Co. — Authentic Andhra Flavours in Maharashtra" },
       { name: "description", content: "Pesarattu, drumstick sambar, ginger chutney and bigger idlis. Authentic Andhra cuisine, brought from Guntur to Maharashtra." },
-      { property: "og:title", content: "Andhra Dosa Company" },
+      { property: "og:title", content: "Andhra Dosa Co." },
       { property: "og:description", content: "Pesarattu is our hero. Drumstick sambar, allam chutney, bigger idlis — the real Andhra." },
       { property: "og:image", content: pesarattu },
     ],
@@ -190,12 +190,12 @@ function Hero() {
               textShadow: "none",
             }}
           >
-            Andhra Dosa Company
+            Andhra Dosa Co.
           </span>
         </h1>
 
         {/* Tagline */}
-        <p className={`font-display italic text-base sm:text-lg lg:text-xl text-white/50 mt-5 sm:mt-8 text-center tracking-wide max-w-md transition-all duration-1000 delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
+        <p className={`font-display text-base sm:text-lg lg:text-xl text-white/50 mt-5 sm:mt-8 text-center tracking-wide max-w-md transition-all duration-1000 delay-700 ${loaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
           Three generations of Guntur's finest, brought to your plate.
         </p>
 
@@ -232,7 +232,7 @@ function MarqueeStrip() {
       <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#0a0604] to-transparent z-10 pointer-events-none" />
       <div className="flex gap-10 sm:gap-14 whitespace-nowrap animate-marquee">
         {[...MARQUEE, ...MARQUEE, ...MARQUEE].map((w, i) => (
-          <span key={i} className="flex items-center gap-10 sm:gap-14 font-display italic text-2xl sm:text-3xl md:text-4xl text-white/60 hover:text-[#FFC300] transition-colors duration-300 cursor-default">
+          <span key={i} className="flex items-center gap-10 sm:gap-14 font-display text-2xl sm:text-3xl md:text-4xl text-white/60 hover:text-[#FFC300] transition-colors duration-300 cursor-default">
             {w}
             <span className="w-1.5 h-1.5 rounded-full bg-[#D62828]" />
           </span>
@@ -325,7 +325,7 @@ function StorySection() {
           <div className="text-[10px] uppercase tracking-[0.4em] text-[#D4A017] font-bold mb-5">Our Story</div>
           <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.92] text-white">
             From a Guntur<br />
-            <span className="italic font-medium text-[#D4A017]">kitchen to you.</span>
+            <span className="font-medium text-[#D4A017]">kitchen to you.</span>
           </h2>
           <p className="mt-6 sm:mt-8 text-base sm:text-lg text-white/55 leading-relaxed max-w-lg">
             Three generations of perfecting pesarattu. Soaking green moong overnight,
@@ -402,7 +402,7 @@ function FeaturedDishes() {
             <div className="text-[10px] uppercase tracking-[0.4em] text-[#D4A017] font-bold mb-4">Signature Dishes</div>
             <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.92] text-white">
               Crafted with<br />
-              <span className="italic font-medium text-[#D4A017]">obsession.</span>
+              <span className="font-medium text-[#D4A017]">obsession.</span>
             </h2>
           </div>
         </Reveal>
@@ -436,7 +436,7 @@ function ProcessStrip() {
           <div className="text-center mb-14 sm:mb-18">
             <div className="text-[10px] uppercase tracking-[0.4em] text-[#D62828] font-bold mb-4">The Process</div>
             <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-white">
-              Four steps. <span className="italic font-medium text-[#D62828]">Zero shortcuts.</span>
+              Four steps. <span className="font-medium text-[#D62828]">Zero shortcuts.</span>
             </h2>
           </div>
         </Reveal>
@@ -485,7 +485,7 @@ function MenuPreview() {
             <div>
               <div className="text-[10px] uppercase tracking-[0.4em] text-[#D4A017] font-bold mb-4">From the menu</div>
               <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl leading-[0.92] text-white">
-                Pick. Tap. <span className="italic font-medium text-[#FF7A00]">Devour.</span>
+                Pick. Tap. <span className="font-medium text-[#FF7A00]">Devour.</span>
               </h2>
             </div>
             <Link to="/menu" className="group inline-flex items-center gap-2 font-bold text-sm text-[#D4A017] hover:gap-3 transition-all">
@@ -544,7 +544,7 @@ function BigCTA() {
           </div>
           <h2 className="font-display font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.88] text-white">
             Eat the real<br />
-            <span className="italic font-medium" style={{
+            <span className="font-medium" style={{
               background: "linear-gradient(135deg, #FFC300, #D4A017, #FF7A00)",
               WebkitBackgroundClip: "text",
               backgroundClip: "text",

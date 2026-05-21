@@ -10,7 +10,7 @@ export function SiteFooter() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5">
-            <div className="font-display font-black text-3xl">Andhra Dosa Company</div>
+            <div className="font-display font-black text-3xl">Andhra Dosa Co.</div>
             <div className="text-[11px] uppercase tracking-[0.3em] text-[#FFC300] mt-1 font-semibold">
               Bringing Andhra to Maharashtra
             </div>
@@ -53,6 +53,7 @@ export function SiteFooter() {
                 { to: "/menu", label: "Menu" },
                 { to: "/story", label: "Our Story" },
                 { to: "/about", label: "Why Andhra" },
+                { to: "/locations", label: "Locations" },
                 { to: "/gallery", label: "Gallery" },
                 { to: "/contact", label: "Contact" },
               ].map((l) => (
@@ -65,7 +66,7 @@ export function SiteFooter() {
         </div>
 
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-white/50">
-          <div>© {new Date().getFullYear()} Andhra Dosa Company · All rights reserved.</div>
+          <div>© {new Date().getFullYear()} Andhra Dosa Co. · All rights reserved.</div>
           <div className="font-display italic text-[#FFC300]/80">"రుచి. సంప్రదాయం. ఆంధ్ర."</div>
         </div>
       </div>

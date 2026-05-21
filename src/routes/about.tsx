@@ -6,9 +6,9 @@ import pesarattu from "@/assets/pesarattu-hero.jpg";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Why Andhra — Andhra Dosa Company" },
+      { title: "Why Andhra — Andhra Dosa Co." },
       { name: "description", content: "Why Andhra cuisine deserves its own stage in Maharashtra. Six reasons we are obsessed." },
-      { property: "og:title", content: "Why Andhra — Andhra Dosa Company" },
+      { property: "og:title", content: "Why Andhra — Andhra Dosa Co." },
       { property: "og:description", content: "Pesarattu, drumstick sambar, allam chutney — the Andhra you have been missing." },
       { property: "og:image", content: pesarattu },
     ],
@@ -34,7 +34,7 @@ function AboutPage() {
             <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">Why Andhra</div>
             <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9] max-w-4xl">
               Different state.<br />
-              <span className="italic font-medium text-[#D62828]">Different soul.</span>
+              <span className="font-medium text-[#D62828]">Different soul.</span>
             </h1>
           </Reveal>
         </div>
@@ -64,7 +64,7 @@ function AboutPage() {
           <Reveal>
             <h2 className="font-display font-black text-5xl sm:text-6xl">
               We are not South Indian.<br />
-              <span className="italic font-medium text-[#FFC300]">We are Andhra.</span>
+              <span className="font-medium text-[#FFC300]">We are Andhra.</span>
             </h2>
             <p className="mt-5 text-white/65 max-w-2xl mx-auto text-lg">
               The map matters. The spice matters. The chutney matters.

@@ -9,6 +9,7 @@ const NAV = [
   { to: "/menu", label: "Menu", hasDropdown: true },
   { to: "/story", label: "Our Story" },
   { to: "/about", label: "Why Andhra" },
+  { to: "/locations", label: "Locations" },
   { to: "/gallery", label: "Gallery" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -98,12 +99,12 @@ export function SiteHeader() {
                   scrolled ? "text-white" : "text-[#1a0f08]"
                 }`}
               >
-                <span className="italic">Andhra</span> Dosa Company
+                Andhra Dosa Co.
               </div>
               <div className="flex items-center gap-1.5 mt-0.5">
                 <div className="h-px w-4 bg-[#D4A017]/60" />
                 <div className="text-[8px] sm:text-[9px] uppercase tracking-[0.28em] text-[#D4A017] font-bold">
-                  Est. Guntur
+                  Flavours of Guntur
                 </div>
                 <div className="h-px w-4 bg-[#D4A017]/60" />
               </div>
@@ -274,9 +275,9 @@ function MobileDrawer({ pathname }: { pathname: string }) {
             </div>
             <div>
               <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-[#D4A017] font-bold">
-                Authentic · Est. Guntur
+                Authentic · Flavours of Guntur
               </div>
-              <div className="font-display font-black text-xl sm:text-2xl text-white mt-0.5">Andhra Dosa Company</div>
+              <div className="font-display font-black text-xl sm:text-2xl text-white mt-0.5">Andhra Dosa Co.</div>
             </div>
           </div>
           <SheetClose asChild>

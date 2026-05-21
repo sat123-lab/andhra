@@ -19,9 +19,9 @@ import gal4 from "@/assets/gallery-4.jpg";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu — Andhra Dosa Company" },
+      { title: "Menu — Andhra Dosa Co." },
       { name: "description", content: "Pesarattu, Andhra dosas, bigger idlis, drumstick sambar, chutneys & podis. The full Andhra menu." },
-      { property: "og:title", content: "Menu — Andhra Dosa Company" },
+      { property: "og:title", content: "Menu — Andhra Dosa Co." },
       { property: "og:description", content: "Pesarattu, Andhra dosas, bigger idlis and drumstick sambar." },
       { property: "og:image", content: pesarattu },
     ],
@@ -119,7 +119,7 @@ function MenuPage() {
             <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">The full menu</div>
             <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
               Tap a category.<br />
-              <span className="italic font-medium">Eat what Andhra eats.</span>
+              <span className="font-medium">Eat what Andhra eats.</span>
             </h1>
           </Reveal>
         </div>

@@ -8,9 +8,9 @@ import interior from "@/assets/interior.jpg";
 export const Route = createFileRoute("/story")({
   head: () => ({
     meta: [
-      { title: "Our Story — Andhra Dosa Company" },
-      { name: "description", content: "From a Guntur kitchen to Maharashtra. The story of Andhra Dosa Company." },
-      { property: "og:title", content: "Our Story — Andhra Dosa Company" },
+      { title: "Our Story — Andhra Dosa Co." },
+      { name: "description", content: "From Guntur flavours to Maharashtra. The story of Andhra Dosa Co." },
+      { property: "og:title", content: "Our Story — Andhra Dosa Co." },
       { property: "og:description", content: "Three generations. One kitchen. The journey from Guntur to Pune." },
       { property: "og:image", content: tawaPour },
     ],
@@ -34,7 +34,7 @@ function StoryPage() {
           <Reveal>
             <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">Our story</div>
             <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
-              From <span className="italic text-[#D62828]">Guntur</span><br />
+              From <span className="text-[#D62828]">Guntur flavours</span><br />
               to your table.
             </h1>
             <p className="mt-6 text-lg text-[#1a0f08]/70 max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ function StoryPage() {
           <Reveal delay={150}>
             <h2 className="font-display font-black text-4xl sm:text-5xl leading-tight">
               Maharashtra had dosas.<br />
-              <span className="italic font-medium text-[#FF7A00]">It didn't have Andhra ones.</span>
+              <span className="font-medium text-[#FF7A00]">It didn't have Andhra ones.</span>
             </h2>
             <p className="mt-5 text-[#1a0f08]/70 text-lg">
               Tamil. Karnataka. Everywhere. Beautiful dosas — but mild.
@@ -79,7 +79,7 @@ function StoryPage() {
                   <li className={`relative md:grid md:grid-cols-2 md:gap-12 ${i % 2 ? "md:[&>div]:col-start-2" : ""}`}>
                     <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-2 w-3 h-3 rounded-full bg-[#FFC300] ring-4 ring-[#1a0f08]" />
                     <div className={`pl-12 md:pl-0 ${i % 2 ? "md:pl-12" : "md:text-right md:pr-12"}`}>
-                      <div className="font-display italic font-black text-5xl text-[#D62828]">{t.year}</div>
+                      <div className="font-display font-black text-5xl text-[#D62828]">{t.year}</div>
                       <div className="font-display font-bold text-2xl mt-2">{t.title}</div>
                       <div className="text-white/65 mt-2">{t.note}</div>
                     </div>
@@ -98,7 +98,7 @@ function StoryPage() {
           </Reveal>
           <Reveal delay={120}>
             <h2 className="font-display font-black text-4xl sm:text-5xl">
-              The recipe never <span className="italic text-[#D62828]">changed.</span>
+              The recipe never <span className="text-[#D62828]">changed.</span>
             </h2>
             <p className="mt-4 text-[#1a0f08]/70 text-lg">
               Same soak time. Same stone grinder. Same cast iron tawa.

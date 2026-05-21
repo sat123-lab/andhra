@@ -21,9 +21,9 @@ import galleryImg9 from "@/assets/gallary/fe8a6b40-db43-4ba7-8858-d05203527d88.j
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Andhra Dosa Company" },
+      { title: "Gallery — Andhra Dosa Co." },
       { name: "description", content: "The kitchen, the food, the moments." },
-      { property: "og:title", content: "Gallery — Andhra Dosa Company" },
+      { property: "og:title", content: "Gallery — Andhra Dosa Co." },
       { property: "og:description", content: "Photos from the kitchen and the dining room." },
       { property: "og:image", content: adc4 },
     ],
@@ -60,7 +60,7 @@ function GalleryPage() {
             <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">Gallery</div>
             <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
               Moments from<br />
-              <span className="italic font-medium text-[#FF7A00]">the tawa.</span>
+              <span className="font-medium text-[#FF7A00]">the tawa.</span>
             </h1>
           </Reveal>
         </div>
