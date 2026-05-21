@@ -10,7 +10,7 @@ export function SiteFooter() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-12 gap-10 mb-14">
           <div className="md:col-span-5">
-            <div className="font-display font-black text-3xl">Andhra Dosa Co.</div>
+            <div className="font-display font-black text-3xl">Andhra Dosa Company</div>
             <div className="text-[11px] uppercase tracking-[0.3em] text-[#FFC300] mt-1 font-semibold">
               Bringing Andhra to Maharashtra
             </div>

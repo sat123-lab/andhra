@@ -98,12 +98,12 @@ export function SiteHeader() {
                   scrolled ? "text-white" : "text-[#1a0f08]"
                 }`}
               >
-                <span className="italic">Andhra</span> Dosa
+                <span className="italic">Andhra</span> Dosa Company
               </div>
               <div className="flex items-center gap-1.5 mt-0.5">
                 <div className="h-px w-4 bg-[#D4A017]/60" />
                 <div className="text-[8px] sm:text-[9px] uppercase tracking-[0.28em] text-[#D4A017] font-bold">
-                  Company · Est. Guntur
+                  Est. Guntur
                 </div>
                 <div className="h-px w-4 bg-[#D4A017]/60" />
               </div>
@@ -276,7 +276,7 @@ function MobileDrawer({ pathname }: { pathname: string }) {
               <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-[#D4A017] font-bold">
                 Authentic · Est. Guntur
               </div>
-              <div className="font-display font-black text-xl sm:text-2xl text-white mt-0.5">Andhra Dosa Co.</div>
+              <div className="font-display font-black text-xl sm:text-2xl text-white mt-0.5">Andhra Dosa Company</div>
             </div>
           </div>
           <SheetClose asChild>
