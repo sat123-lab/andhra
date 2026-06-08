@@ -64,14 +64,14 @@ function GalleryPage() {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {loading && (
-        <div className="fixed inset-0 z-50 bg-[#0a0604]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
+        <div className="fixed inset-0 z-50 bg-[#F8F3E8]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
           <div className="flex flex-col items-center gap-6">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-2 flex items-center justify-center animate-pulse">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-primary/15 ring-1 ring-primary/30 p-2 flex items-center justify-center animate-pulse">
               <img src={logoSvg} alt="Andhra Dosa Co." className="w-full h-full object-contain" />
             </div>
-            <div className="text-[#D4A017] font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
+            <div className="text-primary font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
               Andhra Dosa Co.
             </div>
           </div>
@@ -80,10 +80,10 @@ function GalleryPage() {
       <section className="relative pt-36 pb-12 bg-[#FAF6EE]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">Gallery</div>
-            <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
+            <div className="text-[10px] uppercase tracking-[0.35em] text-[#C9A227] font-bold mb-3">Gallery</div>
+            <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9] text-[#1B3022]">
               Moments from<br />
-              <span className="font-medium text-[#FF7A00]">the tawa.</span>
+              <span className="font-medium text-[#E9C46A]">the tawa.</span>
             </h1>
           </Reveal>
         </div>

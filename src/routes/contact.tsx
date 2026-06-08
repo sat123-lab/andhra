@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { Reveal } from "@/components/Reveal";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import logoSvg from "@/assets/logo.svg";
 
 export const Route = createFileRoute("/contact")({
@@ -28,14 +28,14 @@ function ContactPage() {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {loading && (
-        <div className="fixed inset-0 z-50 bg-[#0a0604]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
+        <div className="fixed inset-0 z-50 bg-[#F8F3E8]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
           <div className="flex flex-col items-center gap-6">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-2 flex items-center justify-center animate-pulse">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-primary/15 ring-1 ring-primary/30 p-2 flex items-center justify-center animate-pulse">
               <img src={logoSvg} alt="Andhra Dosa Co." className="w-full h-full object-contain" />
             </div>
-            <div className="text-[#D4A017] font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
+            <div className="text-primary font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
               Andhra Dosa Co.
             </div>
           </div>
@@ -44,9 +44,9 @@ function ContactPage() {
       <section className="relative pt-36 pb-16 bg-[#FAF6EE]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">Contact</div>
-            <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
-              Come <span className="text-[#D62828]">hungry.</span><br />
+            <div className="text-[10px] uppercase tracking-[0.35em] text-[#C9A227] font-bold mb-3">Contact</div>
+            <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9] text-[#1B3022]">
+              Come <span className="text-[#B35C38]">hungry.</span><br />
               Leave proud.
             </h1>
           </Reveal>
@@ -58,17 +58,15 @@ function ContactPage() {
           <Reveal>
             <div className="space-y-5">
               <Info icon={MapPin} title="Visit" line="Koregaon Park · Pune 411001" />
-              <Info icon={Phone} title="Call" line="+91 99999 99999" href="tel:+919999999999" />
+              <Info icon={Phone} title="Call" line="+91 7977996930" href="tel:+917977996930" />
               <Info icon={Mail} title="Email" line="hello@andhradosa.co" href="mailto:hello@andhradosa.co" />
               <Info icon={Clock} title="Hours" line="7 AM – 11 PM · 7 days a week" />
             </div>
 
             <div className="mt-10 flex items-center gap-3">
-              {[Instagram, Facebook].map((Icon, i) => (
-                <a key={i} href="#" className="w-11 h-11 rounded-full bg-[#1a0f08] text-white grid place-items-center hover:bg-[#D62828] transition-colors">
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
+              <a href="https://www.instagram.com/andhradosaco/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer" className="w-11 h-11 rounded-full bg-secondary text-white grid place-items-center hover:bg-secondary/90 transition-colors">
+                <Instagram className="w-4 h-4" />
+              </a>
             </div>
           </Reveal>
 
@@ -77,8 +75,8 @@ function ContactPage() {
               onSubmit={(e) => { e.preventDefault(); setSent(true); }}
               className="bg-[#FAF6EE] rounded-3xl p-6 sm:p-8 space-y-4"
             >
-              <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold">Reserve a table</div>
-              <h2 className="font-display font-black text-3xl">Book your seat.</h2>
+              <div className="text-[10px] uppercase tracking-[0.35em] text-[#C9A227] font-bold">Reserve a table</div>
+              <h2 className="font-display font-black text-3xl text-[#1B3022]">Book your seat.</h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 <Field label="Name" name="name" />
                 <Field label="Phone" name="phone" type="tel" />
@@ -89,7 +87,7 @@ function ContactPage() {
               <button
                 type="submit"
                 disabled={sent}
-                className="w-full rounded-full bg-[#D62828] text-white py-3.5 font-semibold disabled:opacity-60"
+                className="w-full rounded-full bg-secondary text-foreground py-3.5 font-semibold disabled:opacity-60 hover:bg-secondary/90 transition-colors"
               >
                 {sent ? "Thank you — we'll call to confirm" : "Reserve"}
               </button>
@@ -105,22 +103,22 @@ function Info({ icon: Icon, title, line, href }: { icon: any; title: string; lin
   const Wrap: any = href ? "a" : "div";
   return (
     <Wrap href={href} className="flex items-start gap-4 group">
-      <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#FAF6EE] grid place-items-center group-hover:bg-[#D62828] transition-colors">
-        <Icon className="w-5 h-5 text-[#D62828] group-hover:text-white transition-colors" />
+      <div className="shrink-0 w-12 h-12 rounded-2xl bg-[#FAF6EE] grid place-items-center group-hover:bg-secondary transition-colors">
+        <Icon className="w-5 h-5 text-secondary group-hover:text-white transition-colors" />
       </div>
       <div>
-        <div className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#1a0f08]/50">{title}</div>
-        <div className="font-display font-bold text-xl">{line}</div>
+        <div className="text-[10px] uppercase tracking-[0.25em] font-bold text-[#2F2F2F]">{title}</div>
+        <div className="font-display font-bold text-xl text-[#1B3022]">{line}</div>
       </div>
     </Wrap>
   );
 }
 
 function Field({ label, name, type = "text", textarea }: { label: string; name: string; type?: string; textarea?: boolean }) {
-  const common = "w-full rounded-xl bg-white border border-[#1a0f08]/10 px-4 py-3 text-sm focus:outline-none focus:border-[#D62828]";
+  const common = "w-full rounded-xl bg-white border border-[#2F2F2F]/10 px-4 py-3 text-sm focus:outline-none focus:border-secondary";
   return (
     <label className="block">
-      <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#1a0f08]/55">{label}</span>
+      <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-[#2F2F2F]">{label}</span>
       {textarea ? (
         <textarea name={name} rows={3} className={`${common} mt-1`} />
       ) : (

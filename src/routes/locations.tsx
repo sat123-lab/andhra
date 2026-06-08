@@ -27,7 +27,7 @@ const LOCATIONS = [
   {
     name: "Marol, Mumbai",
     address: "Metro Station, Naka, Marol, Mumbai, Maharashtra 400059",
-    phone: "+91 99999 99999",
+    phone: "+91 7977996930",
     hours: "7 AM – 11 PM · Daily",
     status: "open",
     image: galleryImg3,
@@ -36,7 +36,7 @@ const LOCATIONS = [
   {
     name: "Western Exp Highway",
     address: "Andheri-Kurla Road, next to Andheri Fly over, Andheri (E), Mumbai, 400069",
-    phone: "+91 99999 99999",
+    phone: "+91 7977996930",
     hours: "Opening in 15 days",
     status: "coming-soon",
     image: galleryImg5,
@@ -71,14 +71,14 @@ function LocationsPage() {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {loading && (
-        <div className="fixed inset-0 z-50 bg-[#0a0604]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
+        <div className="fixed inset-0 z-50 bg-[#F8F3E8]/80 backdrop-blur-md flex items-center justify-center transition-opacity duration-700 ease-out">
           <div className="flex flex-col items-center gap-6">
-            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-[#D4A017]/15 ring-1 ring-[#D4A017]/30 p-2 flex items-center justify-center animate-pulse">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl bg-primary/15 ring-1 ring-primary/30 p-2 flex items-center justify-center animate-pulse">
               <img src={logoSvg} alt="Andhra Dosa Co." className="w-full h-full object-contain" />
             </div>
-            <div className="text-[#D4A017] font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
+            <div className="text-primary font-display font-black text-xl sm:text-2xl tracking-wider animate-pulse">
               Andhra Dosa Co.
             </div>
           </div>
@@ -87,10 +87,10 @@ function LocationsPage() {
       <section className="relative pt-36 pb-16 bg-[#FAF6EE]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="text-[10px] uppercase tracking-[0.35em] text-[#D62828] font-bold mb-3">Locations</div>
-            <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9]">
+            <div className="text-[10px] uppercase tracking-[0.35em] text-[#C9A227] font-bold mb-3">Locations</div>
+            <h1 className="font-display font-black text-6xl sm:text-7xl lg:text-8xl leading-[0.9] text-[#1B3022]">
               Find us near<br />
-              <span className="text-[#FF7A00]">you.</span>
+              <span className="text-[#E9C46A]">you.</span>
             </h1>
           </Reveal>
         </div>
@@ -101,7 +101,7 @@ function LocationsPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {LOCATIONS.map((loc, i) => (
               <Reveal key={i} delay={i * 100}>
-                <div className={`relative overflow-hidden rounded-3xl ${loc.status === "coming-soon" ? "bg-[#FAF6EE]" : "bg-white border border-[#1a0f08]/10"}`}>
+                <div className={`relative overflow-hidden rounded-3xl ${loc.status === "coming-soon" ? "bg-[#FAF6EE]" : "bg-white border border-[#2F2F2F]/10"}`}>
                   {loc.image && (
                     <div className="aspect-[16/9] overflow-hidden">
                       <img src={loc.image} alt={loc.name} loading="lazy" className="w-full h-full object-cover" />
@@ -111,21 +111,21 @@ function LocationsPage() {
                     {loc.status === "coming-soon" ? (
                       <>
                         <div className="flex items-center gap-2 mb-4">
-                          <div className="w-12 h-12 rounded-full bg-[#D4A017]/20 flex items-center justify-center">
-                            <Clock className="w-6 h-6 text-[#D4A017]" />
+                          <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                            <Clock className="w-6 h-6 text-primary" />
                           </div>
                           <div>
-                            <div className="font-display font-black text-2xl text-[#1a0f08]">{loc.name}</div>
-                            <div className="text-sm text-[#D62828] font-semibold">Stay Tuned</div>
+                            <div className="font-display font-black text-2xl text-[#1B3022]">{loc.name}</div>
+                            <div className="text-sm text-secondary font-semibold">Stay Tuned</div>
                           </div>
                         </div>
                         <div className="space-y-3">
-                          <div className="flex items-center gap-3 text-[#1a0f08]/70">
-                            <MapPin className="w-5 h-5 text-[#FF7A00]" />
+                          <div className="flex items-center gap-3 text-[#2F2F2F] font-medium">
+                            <MapPin className="w-5 h-5 text-primary" />
                             <span>{loc.address}</span>
                           </div>
-                          <div className="flex items-center gap-3 text-[#1a0f08]/70">
-                            <Clock className="w-5 h-5 text-[#FF7A00]" />
+                          <div className="flex items-center gap-3 text-[#2F2F2F] font-medium">
+                            <Clock className="w-5 h-5 text-primary" />
                             <span>{loc.hours}</span>
                           </div>
                         </div>
@@ -134,11 +134,11 @@ function LocationsPage() {
                       <>
                         <div className="flex items-start justify-between mb-4">
                           <div>
-                            <div className="font-display font-black text-2xl text-[#1a0f08]">{loc.name}</div>
+                            <div className="font-display font-black text-2xl text-[#1B3022]">{loc.name}</div>
                             <div className="flex items-center gap-1 mt-2">
-                              <Star className="w-4 h-4 fill-[#D4A017] text-[#D4A017]" />
-                              <span className="text-sm font-semibold text-[#1a0f08]">4.9</span>
-                              <span className="text-sm text-[#1a0f08]/50">· 2k+ reviews</span>
+                              <Star className="w-4 h-4 fill-primary text-primary" />
+                              <span className="text-sm font-semibold text-foreground">4.9</span>
+                              <span className="text-sm text-[#5F5F5F]">· 2k+ reviews</span>
                             </div>
                           </div>
                           <div className="flex items-center gap-1.5 px-3 py-1.5 bg-[#2a7a3a]/10 rounded-full">
@@ -147,22 +147,22 @@ function LocationsPage() {
                           </div>
                         </div>
                         <div className="space-y-3 mb-6">
-                          <div className="flex items-center gap-3 text-[#1a0f08]/70">
+                          <div className="flex items-center gap-3 text-[#2F2F2F] font-medium">
                             <MapPin className="w-5 h-5 text-[#FF7A00]" />
                             <span>{loc.address}</span>
                           </div>
-                          <div className="flex items-center gap-3 text-[#1a0f08]/70">
+                          <div className="flex items-center gap-3 text-[#2F2F2F] font-medium">
                             <Phone className="w-5 h-5 text-[#FF7A00]" />
                             <span>{loc.phone}</span>
                           </div>
-                          <div className="flex items-center gap-3 text-[#1a0f08]/70">
+                          <div className="flex items-center gap-3 text-[#2F2F2F] font-medium">
                             <Clock className="w-5 h-5 text-[#FF7A00]" />
                             <span>{loc.hours}</span>
                           </div>
                         </div>
                         <a
                           href={`tel:${loc.phone}`}
-                          className="inline-flex items-center gap-2 rounded-full bg-[#D62828] text-white px-6 py-3 font-bold hover:bg-[#b81e1e] transition-colors"
+                          className="inline-flex items-center gap-2 rounded-full bg-secondary text-foreground px-6 py-3 font-bold hover:bg-secondary/90 transition-colors"
                         >
                           <Phone className="w-4 h-4" />
                           Call Now
@@ -171,7 +171,7 @@ function LocationsPage() {
                           href={loc.directions || "#"}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="ml-3 inline-flex items-center gap-2 rounded-full border border-[#1a0f08]/20 text-[#1a0f08] px-6 py-3 font-bold hover:bg-[#FAF6EE] transition-colors"
+                          className="ml-3 inline-flex items-center gap-2 rounded-full border border-[#2F2F2F]/20 text-foreground px-6 py-3 font-bold hover:bg-[#FAF6EE] transition-colors"
                         >
                           <Navigation className="w-4 h-4" />
                           Directions
